@@ -1,0 +1,15 @@
+I was born on July 28th 2003 in <span class="tool" data-tip="">Libreville, Gabon</span>. I obtained my <span class="tool" data-tip="">Baccalauréat</span> in 2020 and I then moved to France to attend university. I currently reside in Lille, in the Nord. I am a first year Computer Science student at l'Université Catholique de Lille.
+This program allows me to developp skills to help fulfill both my need for creativity and my love for all things scientific. After this formation, I intend to pursue a career in design and game development.
+
+
+Université Catholique de Lille -- Septembre 2021-Juin 2022
+Licence Sciences du Numérique
+Realised projects such as the creation of a boardgame and the design of a space for the campus. Developped skills in project management, field studies and teamwork.
+
+Université de Lille -- Septembre 2020-Juin 2021
+Licence Accès Spécifique Santé - Option Psychologie
+Received a training that covered fields such as physics, mathematics, biology and human sciences. Developped an analytical mind and a rigourous and organized work ethic.
+
+Lycée Blaise Pascal, Libreville, Gabon -- Septembre 2012-Juin 2020
+Terminale Scientifique - Option Sciences de la Vie
+Contributed to many school projects and extra-curricular activities, among which the creation of a high scholl paper. Developped a large set of skills, especially the management of large team projects.

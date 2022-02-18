@@ -1,0 +1,302 @@
+:root {
+  --background-color: #060106;
+  --text-color: #541a8a;
+  --typingSpeed: 3s;
+  --typedCharacters: 25;
+}
+
+html {
+  min-height: 100vh;
+  overflow: auto;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: clamp(0.5rem, 5vw + 0.2rem, 1rem);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  min-height: inherit;
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+div {
+  height: clamp(13vh, 2px, 15vh);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 1rem;
+  max-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  /* I can't seem to be able to position the footer on all the pages without it interfering with the content.
+  An absolute position leads to overlap with the main part of the body.*/
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/*
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #541a8a;
+  border-radius: 2vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a1a88;
+}
+*/
+
+/* STYLING FOR INDEX.HTML ONLY*/
+
+#greeting {
+  position: relative;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  width: max-content;
+}
+
+#greeting::before,
+#greeting::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#greeting::before {
+  background: var(--background-color);
+  animation: typewriter var(--typingSpeed) steps(var(--typedCharacters)) 1s
+    forwards;
+}
+
+#greeting::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter var(--typingSpeed) steps(var(--typedCharacters)) 1s
+      forwards,
+    blink 750ms steps(var(--typedCharacters)) infinite;
+}
+
+#subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: UpFade 2s ease var(--typingSpeed) forwards;
+}
+
+.homenav {
+  /* MEDIA QUERY: when the screen gets small, the elements go back to block display */
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-evenly;
+  list-style-type: none;
+  height: fit-content;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: UpFade 2s ease calc(var(--typingSpeed) + 2s) forwards;
+}
+
+a:hover {
+  color: #8a1a88;
+}
+
+/* STYLING FOR THE AUXILIARY PAGES*/
+.pagenav {
+  /* MEDIA QUERY: it becomes a hamburger below a certain screen size*/
+  display: flex;
+  font-size: 2rem;
+  height: fit-content;
+  position: absolute;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: UpFade 2s ease forwards;
+}
+
+.text {
+  padding: 0rem 10rem 0rem 10rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(10rem);
+  animation: UpFade 2s ease 1s forwards;
+}
+
+main > ul > li {
+  list-style-type: "♥";
+}
+
+/* specific to the experiences page */
+li > div {
+  height: 5px;
+}
+
+ul > div {
+  height: 20px;
+}
+
+/* specific to "more infos" page */
+.moreinfos {
+  display: block;
+  position: relative;
+  min-width: 20vw;
+  font-size: clamp(0.5rem, 5vw + 0.2rem, 1.5rem);
+}
+
+article {
+  border: 3px solid rebeccapurple;
+  margin: 3px;
+  padding: 1rem;
+  transform: scale(0.7);
+}
+
+#languages {
+  position: absolute;
+  top: 7rem;
+  left: 3rem;
+}
+
+#programming {
+  position: absolute;
+  top: 15rem;
+  right: 23rem;
+}
+
+#software {
+  position: absolute;
+  top: 28rem;
+  left: 27rem;
+}
+
+/* wow the contact me page does need a lot of styling */
+.contactme {
+  font-size: clamp(1.5rem, 5vw + 0.2rem, 2rem);
+}
+
+.contactform {
+  height: fit-content;
+}
+
+.container {
+  min-width: 30vw;
+  height: inherit;
+  opacity: 0;
+  transform: translateY(10rem);
+  animation: UpFade 2s ease 1s forwards;
+}
+
+.form {
+  height: inherit;
+}
+
+.details {
+  height: inherit;
+}
+
+.text-center {
+  height: fit-content;
+}
+
+.container form .details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .details label {
+  line-height: 30px;
+  font-size: clamp(2vw, 1vh + 1vw, 3vw);
+  font-weight: 700;
+  border-radius: 45px;
+}
+
+.container .details input,
+.container .details textarea {
+  min-width: 100%;
+  min-height: 2vh;
+  padding: 10px 0 10px 20px;
+  border: 5px solid var(--text-color);
+  color: var(--text-color);
+  border-radius: 50px;
+  background: transparent;
+}
+
+.container .details textarea {
+  min-height: 10vh;
+}
+
+.container .details input:focus,
+.container .details textarea:focus {
+  border-color: #8a1a88;
+  transition: all, 0.5s;
+}
+
+.submitbtn button {
+  border: 5px solid var(--text-color);
+  padding: 5px;
+  height: fit-content;
+  width: 25%;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: var(--text-color);
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 45px;
+}
+
+.submitbtn button:hover {
+  color: #8a1a88;
+  border-color: #8a1a88;
+  transition: all, 0.5s;
+}
+
+::placeholder {
+  color: var(--text-color);
+}
+
+/* MEDIA QUERIES */
+
+/* ANIMATIONS */
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes UpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
