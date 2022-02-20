@@ -323,6 +323,22 @@ footer {
 
 /*MEDIA QUERIES*/
 @media (max-width: 400px) {
+  #about {
+    animation: UpFade 6s ease calc(var(--typingSpeed) + 2) forwards;
+  }
+
+  .homenav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+  }
+
+  .homenav > li {
+    grid-row: 1;
+    border: 1px solid var(--dark-purple);
+    padding: 5px;
+  }
+
   section {
     display: flex;
     flex-direction: column;
