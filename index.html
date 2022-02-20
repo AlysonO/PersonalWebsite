@@ -13,113 +13,136 @@
   </head>
   <body>
     <header>
-        <div class="introduction" id="top">
-            <h1 id="greeting">Hello, my name is Alyson!</h1>
-            <p id="subtitle">Welcome to my website.</p>
-        </div>
+      <div class="navigation">
+          <ul class="homenav">
+              <li><a href=#about>♥ about</a></li>
+              <li><a href="#experience">♥ experience</a></li>
+              <li><a href="#more">♥ other</a></li>
+              <li><a href="#contactme">♥ contact</a></li>
+          </ul>
+      </div>
     </header>
     <main>
-        <div class="navigation">
-            <h4>Where do you want to go?</h4>
-            <ul class="homenav">
-                <li><a href=#about>about</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#more">other</a></li>
-                <li><a href="#contactme">contact</a></li>
-            </ul>
-        </div>
+        <div class="introduction" id="top">
+          <h1 id="greeting">Hello, my name is Alyson!</h1>
+          <p id="subtitle">Welcome to my website.</p>
+      </div>
+      <div class="sep"></div>
 
       <!--ABOUT ME SECTION-->
       <div id="about">
-        <h1>About me:</h1>
+        <h1>WHO AM I ?</h1>
         <p>
-          I was born on July 28th, 2003 in
-          <span class="tool1" data-tip="My home, sweet home. The capital of a little country in central Africa.">Libreville, Gabon</span>. I obtained my
-          <span class="tool2" data-tip="The French high school diploma.">Baccalauréat</span> in 2020 and I then
-          moved to France to attend university. I currently reside in Lille, in
-          the Nord. I am a first year Computer Science student at l'Université
-          Catholique de Lille. This program allows me to developp skills to help
-          fulfill both my need for creativity and my love for all things
-          scientific. After this formation, I intend to pursue a career in
-          design and game development.
+          I'm a computer science student at the Université Catholique de Lille. 
+          <br> I enjoy web design and game development. 
         </p>
-        <p class="topscroll"><a href="#top">↑ Click here to scroll back to the top ! ↑</a></p>
       </div>
 
       <!--EXPERIENCES SECTION-->
       <div id="experience">
-        <h1>My experiences:</h1>
-        <ul>
-          <li>
+        <h1>MY EXPERIENCES:</h1>
+        <div>
+          <div class="wrapper">
+          <input id="collapsible1" class="toggle" type="checkbox">
+          <label for="collapsible1" class="lbl-toggle">
             <strong>Université Catholique de Lille</strong> (Septembre 2021-Juin
             2022) -
-            <em>Licence Sciences du Numérique</em>
-            <div></div>
+            <em>Licence Sciences du Numérique</em></label>
+            <div class="collapsible-content">
+            <div class="content">
             <p>
               Realised projects such as the creation of a boardgame and the
               design of a space for the campus. Developped skills in project
               management, field studies and teamwork.
             </p>
-          </li>
-          <div></div>
-          <li>
+            </div>
+            </div>
+          </div>
+          <div class="sep"></div>
+          <div class="wrapper">
+          <input id="collapsible2" class="toggle" type="checkbox">
+          <label for="collapsible2" class="lbl-toggle">
             <strong>Université de Lille</strong> (Septembre 2020-Juin 2021) -
-            <em>Licence Accès Spécifique Santé - Option Psychologie</em>
+            <em>Licence Accès Spécifique Santé - Option Psychologie</em></label>
             <div></div>
+            <div class="collapsible-content">
+            <div class="content">
             <p>
               Received a training that covered fields such as physics,
               mathematics, biology and human sciences. Developped an analytical
               mind and a rigourous and organized work ethic.
             </p>
-          </li>
-          <div></div>
-          <li>
+            </div>
+            </div>
+          </div>
+          <div class="sep"></div>
+          <div class="wrapper">
+          <input id="collapsible3" class="toggle" type="checkbox">
+          <label for="collapsible3" class="lbl-toggle">
             <strong>Lycée Blaise Pascal, Libreville, Gabon</strong> (Septembre
             2012-Juin 2020) -
-            <em>Terminale Scientifique - Option Sciences de la Vie</em>
+            <em>Terminale Scientifique - Option Sciences de la Vie</em></label>
             <div></div>
+            <div class="collapsible-content">
+            <div class="content">
             <p>
               Contributed to many school projects and extra-curricular
-              activities, among which the creation of a high scholl paper.
+              activities, among which the creation of a high school paper.
               Developped a large set of skills, especially the management of
               large team projects.
             </p>
-          </li>
-        </ul>
-        <p class="topscroll"><a href="#top">↑ Click here to scroll back to the top ! ↑</a></p>
+            </div>
+            </div>
+          </div>
+          </div>
+        <p class="topscroll"><a href="#top">↑ Back to the top ! ↑</a></p>
       </div>
 
       <!--MORE ABOUT ME SECTION-->
       <div id="more">
-        <h1>More about me:</h1>
+        <h1>MORE ABOUT ME:</h1>
+        <section>
         <article id="languages">
-          <h3>Languages:</h3>
-          <p>French: native<br>English: C1 <br> German: B2</p>
+          <h3>♥ Languages:</h3>
+          <p>French: native<br>English: C1 <br> German: B2 <br> Korean: Beginner</p>
+          <div class="overlay"><p>In August-September 2019, I took a trip around Germany thanks to a scholarship. 
+          I got to meet people from all over the world and had a great time!</p></div>
         </article>
         <article id="programming">
-          <h3>Programming languages:</h3>
+          <h3>♥ Programming languages:</h3>
           <p>Python<br>C<br>HTML, CSS<br>SQL</p>
         </article>
         <article id="software">
-          <h3>Softwares and programs:</h3>
-          <p>Adobe Suite<br>Office Suite<br>Wordpress</p>
+          <h3>♥ Softwares and programs:</h3>
+          <p>Godot<br>Adobe Suite<br>Office Suite<br>Wordpress</p>
         </article>
         <article id="hobbies">
-            <h3 id="passions">Passions and Hobbies:</h3>
+            <h3 id="passions">♥ Passions and Hobbies:</h3>
             <p>
                 I have a real passion for art in all its forms. 
                 In my free time, I read books of all kinds and from all walks of life. 
                 I also recently got into digital art and textile art.
                 I also volunteer at the Arts Office of the Faculty of Management, 
                 Economics and Sciences of the Université Catholique de Lille.</p>
+                <div class="overlay"><p>I like learning new things. I can crochet (i make amigurumis!), knit, sew, 
+                  I was in my high school choir, i have bound books, i can draw, i practice calligraphy and have done spoken word poetry in the past. 
+                  <br> A jack-of-all-trades haha!</p></div>
         </article>
-        <p class="topscroll"><a href="#top">↑ Click here to scroll back to the top ! ↑</a></p>
+        <article id="learnmore">
+          <h3 id="artsy">♥ Want to learn more ?</h3>
+          <div class="overlay"><p>Find more of my artsy tastes here:<br>
+          <a href="https://open.spotify.com/user/npyegix5k8fkwuc7peyiklwu6?si=8yarmOAmTxGToUgs2kdAcQ&utm_source=copy-link">My Spotify</a><br>
+          <a href="https://pin.it/nLUgSWW">My Pinterest</a>
+          </p></div>
+        </article>
+        </section>
+        <p class="topscroll"><a href="#top">↑ Back to the top ! ↑</a></p>
       </div>
 
       <!--CONTACT ME SECTION-->
       <div id="contactme">
             <div class="text-center">
-              <h1 class="contactme">Get in touch !</h1>
+              <h1 class="contactme">Let's get in touch !</h1>
             </div>
             <div class="details">
                 <form>
@@ -150,7 +173,7 @@
                   ></textarea>
                 </br>
                   <div class="submitbtn">
-                    <button type="submit">Send!</button>
+                    <button type="submit">SEND!</button>
                   </div>
                 </form>
             </div>
