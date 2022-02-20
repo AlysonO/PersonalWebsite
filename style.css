@@ -91,71 +91,49 @@ a:hover {
   animation: UpFade 6s ease var(--typingSpeed) forwards;
 }
 
+/* EXPERIENCE */
+
 #experience {
   display: flex;
   flex-direction: column;
   justify-content: center;
   place-items: center;
+  text-align: center;
 }
 
 .sep {
   height: 2vh;
 }
 
-input[type="checkbox"] {
-  display: none;
+details {
+  width: 80vw;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+details:after {
+  content: "+";
 }
 
-.lbl-toggle {
-  max-width: 80vw;
+details > summary {
+  list-style-type: none;
   cursor: pointer;
-  display: block;
-  text-align: center;
   background: var(--palatinate-purple);
   color: var(--lavender-blush);
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
-.lbl-toggle::after {
-  content: "+";
-  margin-left: 2ex;
-}
-
-.content {
-  background: white;
-}
-
-.content > p {
-  margin: 0;
-}
-
-input[type="checkbox"]:checked + .lbl-toggle {
+details[open] > summary {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-input[type="checkbox"] ~ .collapsible-content {
-  text-align: center;
-  max-height: 0;
-  transform: scaleY(0);
+details > p {
+  margin: 0;
+  background: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-input[type="checkbox"]:checked ~ .collapsible-content {
-  height: 100%;
-  width: 80vw;
-  transform-origin: top;
-  transition: transform 0.2s ease-out;
-  transform: scaleY(1);
-}
-
-/* i just can't figure out why the following options aren't pushed down when i open one. */
+/* MORE */
 
 #more {
   background: white;
@@ -214,6 +192,8 @@ article a:hover {
   color: white;
 }
 
+/* CONTACT ME */
+
 #contactme {
   height: 100vh;
   display: flex;
@@ -257,6 +237,48 @@ textarea::placeholder {
   color: var(--medium-violet-red);
   transition: all 0.5s;
 }
+
+/*social media links*/
+.social-links {
+  margin: 5%;
+  text-align: center;
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-links a {
+  line-height: 5vh !important;
+  height: 4vh;
+  width: 4vh;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--medium-violet-red);
+  transition: all 0.4s ease-in;
+}
+
+.social-links a i {
+  position: relative;
+  width: 3vh;
+  height: 3vh;
+  transform: scale(1.5);
+}
+
+.social-links a:hover {
+  transform: scale(1.5);
+}
+
+/* .social-links a:hover::before {
+  border-color: var(--medium-violet-red);
+  background: var(--medium-violet-red);
+}*/
+
+/*footer*/
 
 footer {
   text-align: center;
